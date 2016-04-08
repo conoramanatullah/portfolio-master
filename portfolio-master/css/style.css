@@ -1,6 +1,6 @@
 .sideBar{
-  position: static;
-  height: 200vh;
+  position: fixed;
+  height: 100%;
 
 
 }
@@ -30,6 +30,11 @@
 }
 .name{
   font-weight: 100;
+  font-size: 1.5em;
+}
+.nameSmall{
+  font-weight: 100;
+  font-size: 1em;
 }
 
 .phone{
@@ -43,4 +48,9 @@ a:visited{
 }
 a:hover{
   text-decoration: none;
+}
+
+.home{
+  margin-left: 0;
+
 }

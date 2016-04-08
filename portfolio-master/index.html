@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <meta charset="utf-8">
     <!--Import Google Icon Font-->
@@ -12,6 +13,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Portfolio</title>
   </head>
+
+
+
   <body class="grey darken-4">
       <!--Import jQuery before materialize.js-->
       <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
@@ -19,55 +23,100 @@
       <script type="text/javascript" src="js/script.js"></script>
       <div class="navbar-fixed">
       <nav>
-
         <div class="nav-wrapper teal ">
-          <a href="#!" class="left"><div class="headerName"></div></a>
-
-          <ul class="right hide-on-small-and-down">
+          <a href="#!" class="brand-logo center">
+            <div class="show-on-small hide-on-med-and-up nameSmall">
+              Conor Amanatullah
+            </div>
+            <div class="show-on-medium-and-up hide-on-med-and-down name center-align">Conor Amanatullah</div>
+          </a>
+          <ul class="right ">
             <!-- <li><a href="#">about</a></li> -->
-            <li><a href="#">work</a></li>
-            <li><a href="#">contact</a></li>
-            <li><a href="#">resume</a></li>
+            <li><a class="waves-effect waves-light modal-trigger" href="#contact-modal">contact</a></li>
+            <li><a href="pdf/resume.pdf" download="conor-amanatullah.pdf" class="hide-on-small-and-down">resume</a></li>
           </ul>
-
         </div>
-
     </nav>
     </div>
     <!-- <img src="img/me.jpg" alt="me" class="img-circle"/> -->
     <!-- <div class="container">
 
     </div> -->
-
-    <div class="row">
-      <div class="col l4 m5 grey darken-3 sideBar">
-        <!-- Grey navigation panel -->
-
-        <div class="">
-            <div class="nameBox">
-              <div class="container">
-                <h3 class="white-text left-align name">
-                  Conor
-                </h3>
-                <h3 class="white-text left-align name">
-                  Amanatullah</h3>
+    <!-- CONTACT MODAL -->
+    <div  id="contact-modal" class="modal">
+      <div class="modal-content black-text container">
+        <h4>Send me an Email!</h4>
+        <div class="divider"></div>
+        <!-- Contact Form -->
+        <div class="row">
+          <form class="col s12" action="MAILTO:conor.amanatullah@gmail.com" method="
+          post">
+            <div class="row">
+              <div class="input-field col s6">
+                <input id="first_name" type="text" class="validate">
+                <label for="first_name">First Name</label>
+              </div>
+              <div class="input-field col s6">
+                <input id="last_name" type="text" class="validate">
+                <label for="last_name">Last Name</label>
               </div>
             </div>
-           <div class="center-align">
-             <img src="img/me.jpg" alt="me" class="responsive-img circle face z-depth-2"/>
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="email" type="email" class="validate">
+                <label for="email" data-error="Invalid Format">Email</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <textarea id="textarea" class="materialize-textarea" length="120"></textarea>
+                <label for="textarea">Message</label>
+              </div>
+            </div>
+            <button class="btn waves-effect waves-light modal-action modal-close" type="submit" name="action">Submit
+              <i class="material-icons right">send</i>
+            </button>
+            <button class="btn waves-effect waves-light modal-action modal-close" >Close
+              <i class="material-icons right">clear</i>
+            </button>
+          </form>
+        </div>
+
+      </div>
+
+    </div>
+    <!-- END MODAL -->
+
+
+
+
+    <div class="row">
+      <div class="col l3 m5 grey darken-3 sideBar z-depth-2 hide-on-small-only">
+        <!-- Grey navigation panel -->
+
+        <div>
+            <div class="nameBox">
+
+            </div>
+           <div class="center-align" id="me">
+             <img src="img/me.jpg" id="meFace"alt="me" class="responsive-img circle face z-depth-2"/>
            </div>
            <h4 class="white-text center-align name">UX.UI Designer</h4>
            <h4 class="white-text center-align name">Javascript Developer</h4>
            <h4 class="white-text center-align name">Musician</h4>
            <div class="container">
-             <div class="row">
+             <div class="">
                <div class="divider"></div>
 
                <div class="section center-align">
 
-                 <p class="white-text col s9 left-align phone">
-                   <i class="fa fa-phone white-text fa-2x col s3  center-align responsive-img"></i>
-                   <a href="tel:3038774956">303.877.4956</a>
+                 <p class="white-text  left-align phone row">
+                   <i class="fa fa-phone white-text fa-2x  col s3 center-align responsive-img"></i>
+                   <a href="tel:3038774956" class="col s9">303.877.4956</a>
+                 </p>
+                 <p class="white-text   row phone">
+                   <i class="fa fa-home fa-2x col s3"></i>
+                   <a href="#" class="col s9 home left-align">Boulder, CO</a>
                  </p>
                </div>
 
@@ -79,7 +128,7 @@
         </div>
       </div>
 
-      <div class="col l8 m7 s0 right">
+      <div class="col l9 m7 s0 right">
         <!-- Teal page content  -->
         <!-- <div class="imageBox col" >
           <img src="img/green.jpg" alt="green" class="materialboxed"/>
@@ -140,20 +189,61 @@
           <div class="container">
             <h1 class="header teal-text">My Work</h1>
             <p>
-              Etiam lacinia odio ut feugiat feugiat. Sed bibendum blandit fermentum.
-              Quisque vitae purus ac nisl tincidunt aliquet. Suspendisse tincidunt
-              eleifend risus varius semper. Maecenas viverra non massa eu efficitur.
-              In maximus interdum diam. Interdum et malesuada fames ac ante ipsum primis
-              in faucibus.
+              Most of my work and experience has come from class exercises or personal projects.
+              I enjoy a challenge and tend to persue tasks that make me think. I have worked with a
+              variety of projects, everything from video games to Linux system calls. I aim to have
+              a wide understanding of the modern computing world and every project I work on should
+              fit that goal.
             </p>
           </div>
         </div>
+        <div class="parallax-container">
+          <!-- First image -->
+          <div class="parallax"><img src="img/unsplash-example.jpg" ></div>
+        </div>
+        <div class="section white z-depth-2">
+          <div class="container">
+            <h3>Unsplash Script</h3>
+            <p>
+              The website Unsplash provides the public with royalty-free images that are always
+              very beautiful and perfect for mockups. I wrote a script for myself personally
+              that pulls an image from their API and sets it as a background.
+            </p>
+            <div class="divider">
 
+            </div>
+            <div class="">
+              <p>
+                Photo credit: <a href="https://unsplash.com/francesgunn">Frances Gunn</a>
+              </p>
+            </div>
+            <a href="https://github.com/conoramanatullah/unsplash-background"class="btn-floating btn-large waves-effect waves-light teal right"><i class="material-icons">arrow_forward</i></a>
+          </div>
+        </div>
+        <!-- <div class="parallax-container"> -->
+
+          <!-- <div class="parallax"><img src="img/memory-work.jpg" ></div> -->
+        <!-- </div> -->
+        <!-- <div class="section white z-depth-2">
+          <div class="container">
+            <h3>Memory Game</h3>
+            <p>
+              My first introduction into javascript. I wanted the game to briefly show you
+              which squares to press, and if you press the correct ones, the game will light
+              those squares. Simple, but I like it since it was my first real JS project.
+            </p>
+          </div>
+        </div> -->
 
 
 
     </div>
     </div>
+    <footer class="page-footer teal">
+      <div class="container">
+
+      </div>
+    </footer>
 
 
 
@@ -162,7 +252,6 @@
 
 
 
-
-
+<!-- Ayyy lmao -->
   </body>
 </html>
